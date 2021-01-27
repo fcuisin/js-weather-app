@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+html {
+  background: url(images/noaa-QRBe3Ithczs-unsplash.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p, a, button {
+  font : normal 300 20px/1 'Josefin Sans', sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
