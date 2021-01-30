@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   background: url(images/noaa-QRBe3Ithczs-unsplash.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -13,18 +17,93 @@ body,html {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, p, a, button {
+h1, h2, h3, h4, h5, p, a, button, div {
   font : normal 300 20px/1 'Josefin Sans', sans-serif;
   color: #fff;
 }
 
-.container {
+/* Header - Start */
+
+.banner {
   display: flex;
   justify-content: center;
+  height: 150px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: -0.05em;
+}
+
+/* Header - End */
+
+/* Main section - Start */
+
+.main-section {
+  display: flex;
   align-items: center;
-  height: 100vh;
+  justify-content: space-around;
+  padding: 0 15px;
+  height: calc(100vh - 150px);
+}
+
+.card {
+  backdrop-filter: blur(5px);
+  display: flex;
+  border: 1px solid #fff;
+  min-width: 300px;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+
+.card_info {
+  width: 100%;
+  padding-top: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.card_temperature {
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.temperature_right {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 12px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.temperature_value{
+  font-size: 7rem;
+}
+
+.card_city {
+  display: flex;
+  justify-content: center;
+}
+
+.card_img {
+  padding: 20px;
+  text-align:center;
 }
 
 .yellow {
   color: ;
 }
+
+/* Main section - End */
