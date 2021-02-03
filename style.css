@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, p, a, button, div {
   box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
 }
 
+.hidecard {
+  display: none;
+}
+
 .card_info {
   width: 100%;
   padding-top: 10px;
@@ -65,9 +69,34 @@ h1, h2, h3, h4, h5, p, a, button, div {
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
+
+.card_info_humidity {
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.card_info_humidity img {
+  max-height: 25px;
+  padding-right: 5px;
+}
+
+.card_info_wind {
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.card_info_wind img {
+  max-height: 25px;
+  padding-right: 5px;
+}
+
 
 .card_temperature {
   display: flex;
@@ -76,6 +105,14 @@ h1, h2, h3, h4, h5, p, a, button, div {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+.card_date {
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .temperature_right {
@@ -95,11 +132,16 @@ h1, h2, h3, h4, h5, p, a, button, div {
 .card_city {
   display: flex;
   justify-content: center;
+  align-items: baseline;
+}
+
+.card_city img {
+  max-width: 25px;
 }
 
 .card_img {
-  padding: 20px;
-  text-align:center;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .yellow {
