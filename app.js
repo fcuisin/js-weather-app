@@ -1,4 +1,4 @@
-let token = "2c1b5d784cce8f292854b502ac2bacee";
+let token = config.MY_API_TOKEN;
 ;
 
 function pushWeatherData(data) {
