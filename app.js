@@ -1,4 +1,5 @@
-let token = config.MY_API_TOKEN;
+let token = "2c1b5d784cce8f292854b502ac2bacee";
+;
 
 function pushWeatherData(data) {
 
@@ -62,19 +63,21 @@ function pushWeatherData(data) {
 }
 
 
-function fetchApi(pos) {
-  let crd = pos.coords;
+async function fetchApi(pos) {
 
+  let crd = pos.coords;
   let url = `http://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=${token}`;
 
-  fetch(url)
-  .then((resp) => resp.json())
-  .then(function(data) {
-    pushWeatherData(data);
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+  try {
+
+    const response = await fetch(url);
+    return pushWeatherData(await response.json());
+
+  } catch (error) {
+
+    console.log('Fetch error: ', error);
+
+  }
 
 }
 
